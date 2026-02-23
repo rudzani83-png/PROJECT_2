@@ -7,10 +7,29 @@ SELECT Count(*) AS Total_Property FROM property24
 --2. How many properties are listed in each province?
 
 
+SELECT province, COUNT(*) AS property_count
+FROM Property24
+GROUP BY province;
 
 --3. How many properties are listed in each city?
+
+SELECT CITY, COUNT(*) AS City_count
+FROM Property24
+GROUP BY CITY
+
 --4. How many properties have more than 2 bedrooms?
+
+SELECT COUNT(*) AS properties_with_more_than_2_bedrooms
+FROM Property24
+WHERE bedrooms > 2
+
 --5. How many properties have 2 or more bathrooms?
+
+SELECT COUNT(*) AS properties_with_2_or_more_bathrooms
+FROM Property24
+WHERE bathrooms >= 2
+
+
 --6. How many properties have parking for at least 2 cars?
 --7. How many properties are priced above R3,000,000?
 --8. How many properties are in Gauteng?
