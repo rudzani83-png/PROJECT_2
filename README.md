@@ -1,0 +1,2 @@
+# PROJECT_2
+Aggregations (COUNT, SUM, AVG, GROUP BY)
