@@ -31,12 +31,52 @@ WHERE bathrooms >= 2
 
 
 --6. How many properties have parking for at least 2 cars?
+
+
+SELECT COUNT(*) AS properties_parking
+FROM Property24
+WHERE PARKING >= 2
+
+
 --7. How many properties are priced above R3,000,000?
+
+
+SELECT COUNT(*) AS Properties_Price
+FROM Property24
+WHERE PROPERTY_PRICE > 3000000;
+
+
 --8. How many properties are in Gauteng?
+
+SELECT COUNT(*) AS Property_Gauteng
+FROM Property24
+WHERE PROVINCE = 'Gauteng' 
+
+
+SELECT * FROM Property24
+
 --9. How many properties per province have floor size greater than 200?
+
+SELECT 
+    PROVINCE,
+    COUNT(*) AS Property_Size
+FROM Property24
+WHERE FLOOR_SIZE > 200
+GROUP BY PROVINCE;
+
 --10. How many distinct provinces are in the table?
+
+SELECT COUNT(DISTINCT PROVINCE) AS distinct_provinces
+FROM Property24;
+
 --SECTION 2 – SUM Aggregations (10 Questions)
 --11. What is the total value of all properties combined?
+
+SELECT SUM(PROPERTY_PRICE) AS Total_Value 
+FROM Property24;
+
+
+
 --12. What is the total property value per province?
 --13. What is the total property value per city?
 --14. What is the total monthly repayment for all properties?
